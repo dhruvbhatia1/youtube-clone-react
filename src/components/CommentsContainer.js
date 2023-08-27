@@ -4,59 +4,76 @@ import React from "react";
 
 const commentData = [
 	{
-		name: "John Doe",
-		text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+		name: "Alice",
+		text: "This video is interesting.",
 		replies: [
 			{
-				name: "Akshay",
-				text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-			},
-			{
-				// create dummy data with different names
-				name: "Dhruv",
-				text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+				name: "Bob",
+				text: "I agree, it caught my attention too.",
 				replies: [
 					{
-						name: "Trisha",
-						text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-						replies: [
-							{
-								name: "Dhruv",
-								text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-							},
-						],
+						name: "Charlie",
+						text: "What specifically did you find interesting?",
 					},
 					{
-						name: "Rahul",
-						text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+						name: "David",
+						text: "I think it's the topic that's captivating.",
+					},
+				],
+			},
+			{
+				name: "Eve",
+				text: "It's a good video.",
+			},
+		],
+	},
+	{
+		name: "Frank",
+		text: "I enjoyed this game.",
+		replies: [
+			{
+				name: "Grace",
+				text: "Glad to hear that! What did you like about it?",
+				replies: [
+					{
+						name: "Frank",
+						text: "I liked the graphics and the gameplay.",
+					},
+				],
+			},
+			{
+				name: "Holly",
+				text: "I can't stop playing!",
+				replies: [
+					{
+						name: "Isaac",
+						text: "I can relate, it's addicting!",
 					},
 				],
 			},
 		],
 	},
 	{
-		name: "Jane Doe",
-		text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+		name: "Jack",
+		text: "The recipe is simple and delicious.",
 		replies: [
 			{
-				name: "Akshay",
-				text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+				name: "Karen",
+				text: "I'm glad you liked it! What other recipes have you tried?",
 			},
 		],
 	},
 	{
-		name: "Kunal",
-		text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-		replies: [],
-	},
-	{
-		name: "Aryan",
-		text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+		name: "Liam",
+		text: "Looking forward to watching this movie.",
 	},
 ];
 
+
+// You can continue adding more comments and replies with generic content as needed.
+
 const Comment = ({ data }) => {
-	const { name, text} = data;
+	const { name, text } = data;
 	return (
 		<div className="flex shadow-sm bg-gray-100 p-2 rounded-lg my-2">
 			<img

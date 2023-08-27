@@ -3,4 +3,6 @@ export const YOUTUBE_VIDEOS_API =
 	process.env.REACT_APP_GOOGLE_API_KEY;
 
 export const YOUTUBE_SEARCH_API =
-	"http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+	"https://corsproxy.io/?http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+
+export const OFFSET_LIVE_CHAT = 25;
