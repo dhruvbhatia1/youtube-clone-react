@@ -5,4 +5,8 @@ export const YOUTUBE_VIDEOS_API =
 export const YOUTUBE_SEARCH_API =
 	"https://corsproxy.io/?http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
 
+export const YOUTUBE_VIDEO_SEARCH_API =
+	"https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key=" +
+	process.env.REACT_APP_GOOGLE_API_KEY;
+
 export const OFFSET_LIVE_CHAT = 25;
