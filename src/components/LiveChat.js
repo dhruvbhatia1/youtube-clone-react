@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ChatMessage from "./ChatMessage";
 import { useDispatch, useSelector } from "react-redux";
-import { addMessage } from "../utils/chatSlice";
+import { addMessage, resetMessages } from "../utils/chatSlice";
 import { generateRandomComment, generateRandomName } from "../utils/helper";
 
 const LiveChat = () => {
@@ -23,7 +23,10 @@ const LiveChat = () => {
 			);
 		}, 2000);
 
-		return () => clearInterval(timer);
+		return () => {
+			clearInterval(timer);
+			dispatch(resetMessages());
+		};
 	}, []);
 
 	return (
@@ -43,10 +46,12 @@ const LiveChat = () => {
 				className="w-full p-2 ml-2 shadow-sm bg-slate-50"
 				onSubmit={(e) => {
 					e.preventDefault();
-					dispatch(addMessage({
-						name: "You",
-						message: liveMessage,
-					}))
+					dispatch(
+						addMessage({
+							name: "You",
+							message: liveMessage,
+						})
+					);
 					setLiveMessage("");
 				}}
 			>
