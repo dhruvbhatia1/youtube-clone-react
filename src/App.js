@@ -3,18 +3,29 @@ import Body from "./components/Body";
 import Head from "./components/Head";
 import { Provider } from "react-redux";
 import store from "./utils/store";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter, ScrollRestoration } from "react-router-dom";
 import MainContainer from "./components/MainContainer";
 import WatchPage from "./components/WatchPage";
+import SearchResults from "./components/SearchResults";
 
 const appRouter = createBrowserRouter([
 	{
 		path: "/",
-		element: <Body />,
+		element: (
+			<>
+				<Head />
+				<Body />
+				<ScrollRestoration />
+			</>
+		),
 		children: [
 			{
 				path: "/",
 				element: <MainContainer />,
+			},
+			{
+				path: "/search",
+				element: <SearchResults />,
 			},
 			{
 				path: "/watch",
@@ -28,7 +39,6 @@ function App() {
 	return (
 		<Provider store={store}>
 			<div>
-				<Head />
 				<RouterProvider router={appRouter} />
 			</div>
 		</Provider>

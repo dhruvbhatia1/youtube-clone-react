@@ -13,8 +13,11 @@ const chatSlice = createSlice({
 			}
 			state.messages.push(action.payload);
 		},
+		resetMessages: (state) => {
+			state.messages = [];
+		},
 	},
 });
 
-export const { addMessage } = chatSlice.actions;
+export const { addMessage, resetMessages } = chatSlice.actions;
 export default chatSlice.reducer;
