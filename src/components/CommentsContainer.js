@@ -67,8 +67,17 @@ const commentData = [
 		name: "Liam",
 		text: "Looking forward to watching this movie.",
 	},
+	{
+		name: "Mia",
+		text: "Loved this video!",
+		replies: [
+			{
+				name: "Noah",
+				text: "Me too! I'm a big fan of this channel.",
+			},
+		],
+	},
 ];
-
 
 // You can continue adding more comments and replies with generic content as needed.
 
@@ -100,10 +109,10 @@ const CommentList = ({ comments }) => {
 	));
 };
 
-const CommentsContainer = () => {
+const CommentsContainer = ({ viewCount }) => {
 	return (
 		<div className="m-5 p-2">
-			<h1 className="text-2xl font-bold">Comments</h1>
+			<h1 className="text-xl font-bold">Comments ({viewCount})</h1>
 			<CommentList comments={commentData} />
 		</div>
 	);

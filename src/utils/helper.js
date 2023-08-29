@@ -53,3 +53,15 @@ export function generateRandomName() {
 export function generateRandomComment() {
 	return liveComments[Math.floor(Math.random() * liveComments.length)];
 }
+
+export function formatYouTubeViews(number) {
+	if (number < 1000) {
+		return number.toString(); // No abbreviation for numbers less than 1,000
+	} else if (number < 1000000) {
+		return (number / 1000).toFixed(1) + "K"; // Abbreviate thousands with one decimal place
+	} else if (number < 1000000000) {
+		return (number / 1000000).toFixed(1) + "M"; // Abbreviate millions with one decimal place
+	} else {
+		return (number / 1000000000).toFixed(1) + "B"; // Abbreviate billions with one decimal place
+	}
+}
