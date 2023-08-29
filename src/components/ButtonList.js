@@ -15,7 +15,7 @@ const list = [
 
 const ButtonList = () => {
 	return (
-		<div className="flex">
+		<div className="flex justify-evenly">
 			{list.map((item, index) => {
 				return <Button key={index} name={item} />;
 			})}
