@@ -56,9 +56,10 @@ const LiveChat = () => {
 				}}
 			>
 				<input
-					className="px-2 py-1 w-3/4 border border-black"
+					className="px-2 py-1 w-3/4 border border-black rounded-md"
 					type="text"
 					value={liveMessage}
+					placeholder="Chat..."
 					onChange={(e) => setLiveMessage(e.target.value)}
 				/>
 				<button className="px-2 mx-4 py-1 border border-gray-300 rounded-md hover:bg-slate-200">
