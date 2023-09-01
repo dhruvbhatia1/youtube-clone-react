@@ -50,7 +50,7 @@ const WatchPage = () => {
 				</div>
 			</div>
 			{videoInfo && (
-				<div className="px-7 py-3">
+				<div className="px-6 py-3">
 					<h1 className="text-xl font-bold">{videoInfo?.snippet?.title}</h1>
 					<h1 className="mt-2 text-l font-semibold">
 						{videoInfo?.snippet?.channelTitle}
