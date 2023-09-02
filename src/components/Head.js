@@ -74,6 +74,7 @@ const Head = () => {
 					onSubmit={(e) => {
 						e.preventDefault();
 						// console.log("submitted");
+						setShowSuggestions(false);
 						navigate("/search?q=" + searchQuery);
 					}}
 				>
@@ -81,7 +82,10 @@ const Head = () => {
 						className="w-1/2 border px-6 border-gray-400 p-2 rounded-l-full"
 						type="text"
 						value={searchQuery}
-						onChange={(e) => setSearchQuery(e.target.value)}
+						onChange={(e) => {
+							setSearchQuery(e.target.value);
+							setShowSuggestions(true);
+						}}
 						onFocus={() => setShowSuggestions(true)}
 						onBlur={() => {
 							setTimeout(() => setShowSuggestions(false), 200);
