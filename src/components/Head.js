@@ -4,6 +4,7 @@ import { toggleMenu } from "../utils/appSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
 import { cacheResults } from "../utils/searchSlice";
 import { Link, useNavigate } from "react-router-dom";
+import SearchIcon from "@mui/icons-material/Search";
 
 const Head = () => {
 	const [searchQuery, setSearchQuery] = useState("");
@@ -92,22 +93,23 @@ const Head = () => {
 						}}
 					/>
 					<button className="border border-gray-400 px-4 py-2 rounded-r-full bg-gray-100">
-						🔍
+						<SearchIcon fontSize="small" />
 					</button>
 					{showSuggestions && (
 						<div className="fixed bg-white py-2 px-2 w-1/3 shadow-lg rounded-xl border border-gray-100">
 							<ul>
 								{suggestions.map((suggestion, index) => (
-									<li
-										key={index}
-										className="py-2 px-3 shadow-sm hover:bg-gray-100 cursor-default"
-										onMouseDown={(e) => {
-											// console.log(suggestion + " clicked");
-											setSearchQuery(suggestion);
-										}}
-									>
-										<Link to={"/search?q=" + suggestion}>🔍 {suggestion} </Link>
-									</li>
+									<Link to={"/search?q=" + suggestion} key={index}>
+										<li
+											className="py-2 px-3 rounded-full shadow-sm hover:bg-gray-200 cursor-default"
+											onMouseDown={(e) => {
+												// console.log(suggestion + " clicked");
+												setSearchQuery(suggestion);
+											}}
+										>
+											<SearchIcon /> {suggestion}
+										</li>{" "}
+									</Link>
 								))}
 							</ul>
 						</div>
@@ -115,13 +117,19 @@ const Head = () => {
 				</form>
 			</div>
 
-			<div className="col-span-1">
-				<img
-					className="h-8"
-					src="https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg"
-					alt="user-icon"
-				/>
-			</div>
+			<a
+				href="https://github.com/dhruvbhatia1/youtube-clone-react"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<div className="col-span-1 hover:opacity-80">
+					<img
+						className="h-8"
+						src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+						alt="github-logo"
+					/>
+				</div>
+			</a>
 		</div>
 	);
 };
