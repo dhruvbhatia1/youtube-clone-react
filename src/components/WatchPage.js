@@ -27,7 +27,7 @@ const WatchPage = () => {
 	const getVideoInfo = async () => {
 		const data = await fetch(YOUTUBE_VIDEO_INFO_API + videoId);
 		const json = await data.json();
-		console.log(json.items[0]);
+		// console.log(json.items[0]);
 		setVideoInfo(json.items[0]);
 	};
 
