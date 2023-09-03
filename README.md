@@ -29,23 +29,25 @@ Before you begin, ensure you have the following installed on your machine:
 
    ```bash
    git clone https://github.com/dhruvbhatia1/youtube-clone-react.git
+   ```
 
 2. **Install the Dependencies:**
 
    Navigate to the project directory on your terminal and run the following command to install all the required dependencies:
-    ```bash 
+    ```shell
     cd youtube-clone-react
-    ```
-   ```bash
-   npm install
-   ```
 
+   npm install
+    ```
+    
+    
 ## Configuration
 
-    Create a .env file in the root directory of the project. 
-    Add the following line to the .env file and replace YOUR_API_KEY with your own API key.
+   Create a .env file in the root directory of the project. 
+   Add the following line to the .env file and replace YOUR_API_KEY with your own API key.
 
     REACT_APP_GOOGLE_API_KEY=YOUR_API_KEY
+    
 
 ## Running the Application
 
