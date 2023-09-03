@@ -1,7 +1,10 @@
 # Youtube Clone Using React
 
-Project Description - 
-
+- Developed a YouTube clone with React and Tailwind CSS.
+- Integrated the YouTube API to fetch video data and display it on the website.
+- Implemented video playing, real-time live chat, nested comments.
+- Optimized the search bar with debouncing and caching for search suggestions.
+- Demonstrated proficiency in front-end development and API integration with React.
 
 
 Project Demo Link: https://youtube-dhruvbhatia.vercel.app/
