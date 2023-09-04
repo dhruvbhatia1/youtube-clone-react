@@ -1,6 +1,6 @@
 # Youtube Clone Using React
 
-- Developed a YouTube clone with React and Tailwind CSS and Redux Store.
+- Developed a YouTube clone with React, Tailwind CSS and Redux Store.
 - Used Youtube's Data API to fetch videos and their data.
 - Replicated complex features like multi-level comments and YouTube's live chat for interactive user engagement.
 - Optimized the search bar with debouncing and caching for search suggestions.
